@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GetBus</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <link rel="stylesheet" href="css/style.css">
@@ -11,6 +11,7 @@
 <body>
     <main id="main">
        
+<!--
         <header>
             <div class="container container-header">
                 <div class="logo">
@@ -24,17 +25,57 @@
                 </nav>
             </div>
         </header>
+-->
         
         <section class="b-first">
+           
+            <header>
+                <div class="container container-header">
+                    <div class="logo">
+                        <h1><a href="#">get<span>bus</span></a></h1>
+                    </div>
+                    <nav class="menu">
+                        <a href="#"  class="js-nav menu-nav" data-href="advantage">преимущества</a>
+                        <a href="#"  class="js-nav menu-nav" data-href='offer'>мы предлагаем</a>
+                        <a href="#"  class="js-nav menu-nav" data-href='team'>команда</a>
+                        <a href="#"  class="js-nav menu-nav" data-href='contact'>контакты</a>
+                        <ul class="menu-lang">
+                            <li><a href="#" class="current">Ru</a>
+                                <ul class="menu-lang__sub">
+                                    <li><a href="#">Eng</a></li>
+                                    <li><a href="#">Ua</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <div id="nav-icon" class="menu-mob">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    
+                    <nav class="dropdown_menu">
+                        <a href="#" class="dropdown_menu_list js-dropdown" data-href="advantage">преимущества</a>
+                        <a href="#" class="dropdown_menu_list js-dropdown" data-href="offer">мы предлагаем</a>
+                        <a href="#" class="dropdown_menu_list js-dropdown" data-href="team">команда</a>
+                        <a href="#" class="dropdown_menu_list js-dropdown" data-href="contact">контакты</a>
+                    </nav>
+                    
+                </div>
+            </header>
+           
             <div class="title">
                 <p class="title-main">getbus smart-service</p>
                 <p class="subtitle">умный подход к работе и бизнесу</p>
+                
             </div>
             
             <form action="" method="post" id="form">
                 <fieldset>
                     <div class="group group_name">
-                        <label for="name">ваше name</label>
+                        <label for="name">ваше имя</label>
                         <input type="text" id="name" name="name" required>
                     </div>
 
@@ -45,7 +86,7 @@
 
                     <div class="group group_email">
                         <label for="email">ваш email</label>
-                        <input type="text" id="email" name="email" required>
+                        <input type="text" id="email" name="email" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
                     </div>
 
                     <div class="group group_phone">
@@ -59,59 +100,199 @@
             
         </section>
         
-        <section class="advantage" style="height:100vh;">
+        <section class="advantage" data-id="advantage" style="height:100%; padding-bottom: 50px;">
             <div class="container">
                 <h2>наши преимущества</h2>
                 
                 <div class="adv-all">
                    
                     <div class="adv-card">
-                        <div class="adv-card_logo"></div>
+                        <div class="adv-card_logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <polygon style="fill:#E6E2E0;" points="121.796,269.608 73.119,344.219 167.78,438.881 242.391,390.203 "/>
+                                <polygon style="fill:#EE3840;" points="403.094,264.221 247.778,108.905 110.445,130.358 25.05,215.753 136.255,220.429   291.571,375.745 296.246,486.95 381.641,401.555 "/>
+                                
+                                <path style="fill:#CCC4C1;" d="M504.825,7.176c-91.794-25.474-177.32,22.004-217.459,62.143  c-11.993,11.992-191.31,191.309-191.31,191.309l155.316,155.316c0,0,162.336-162.336,191.309-191.309  C482.819,184.496,530.298,98.969,504.825,7.176z"/>
+                                
+                                <path style="fill:#EE3840;" d="M152.269,359.731c-4.628-4.628-4.628-12.133,0-16.761l164.787-164.787  c4.628-4.628,12.133-4.628,16.761,0c4.628,4.628,4.628,12.133,0,16.761L169.03,359.731  C164.401,364.359,156.897,364.36,152.269,359.731z"/>
+                                
+                                <circle style="fill:#FFFFFF;" cx="403.105" cy="108.895" r="43.796"/>
+                                <g>
+                                    <path style="fill:#FFB14D;" d="M3.471,432.083c-4.628-4.628-4.628-12.133,0-16.761l45.234-45.234   c4.628-4.628,12.133-4.628,16.761,0c4.628,4.628,4.628,12.133,0,16.761l-45.234,45.234C15.604,436.711,8.099,436.712,3.471,432.083   z"/>
+                                    
+                                    <path style="fill:#FFB14D;" d="M79.917,508.528c-4.628-4.628-4.628-12.133,0-16.761l45.234-45.234   c4.628-4.628,12.133-4.628,16.761,0s4.628,12.133,0,16.761l-45.234,45.234C92.049,513.157,84.545,513.157,79.917,508.528z"/>
+                                    
+                                    <path style="fill:#FFB14D;" d="M22.632,487.679c-4.628-4.628-4.628-12.133,0-16.761l63.45-63.45c4.628-4.628,12.133-4.628,16.761,0   c4.628,4.628,4.628,12.133,0,16.761l-63.45,63.45C34.765,492.307,27.261,492.307,22.632,487.679z"/>
+                                </g>
+                            </svg>
+                        </div>
                         <div class="adv-card_txt">
-                            Надзвичайно швидкий старт онлайн продажу квитків.
+                            Быстрый старт онлайн продаж билетов.
                         </div>
                     </div>
                     <div class="adv-card">
-                        <div class="adv-card_logo"></div>
+                        <div class="adv-card_logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+                                <g>
+                                
+                                <path style="fill:#ADA7A4;" d="M77.494,308.902c-20.956,0-38.005-17.049-38.005-38.005c0-6.999-5.674-12.672-12.672-12.672   s-12.672,5.673-12.672,12.672c0,34.93,28.419,63.348,63.348,63.348h26.452v-25.343L77.494,308.902L77.494,308.902z"></path>
+                                
+                                <path style="fill:#ADA7A4;" d="M481.521,274.688h-43.052c-10.052-25.393-28.036-47.853-51.571-65.401   c-0.399-51.083-6.4-82.887-20.735-82.887c-10.549,0-42.381,18.355-65.515,46.696c-12.314-2.117-25.076-3.239-38.158-3.239   c-102.171,0-184.997,67.925-184.997,151.714c0,44.775,23.657,85.014,61.273,112.784l-12.216,69.28l47.421,8.362l9.391-53.26   c23.991,9.325,50.814,14.548,79.127,14.548s55.136-5.225,79.127-14.548l9.391,53.26l47.421-8.362l-12.216-69.28   c23.868-17.621,42.107-40.263,52.256-65.899h43.052c9.02,0,16.331-7.312,16.331-16.331v-61.108   C497.853,282,490.541,274.688,481.521,274.688z"></path>
+                                </g>
+                                
+                                <path style="fill:#7A7674;" d="M484.09,296.729c-6.997,0-12.672,5.673-12.672,12.672s5.674,12.672,12.672,12.672h13.763v-25.343  H484.09z"></path>
+                                <circle style="fill:#FFB14D;" cx="262.494" cy="55.122" r="55.122"></circle>
+                                
+                                <path style="fill:#3D3D3B;" d="M308.23,237.185c-1.272,0-2.564-0.193-3.84-0.598c-13.345-4.239-27.442-6.389-41.898-6.389  c-14.456,0-28.553,2.149-41.899,6.389c-6.672,2.12-13.794-1.571-15.914-8.24c-2.119-6.67,1.571-13.794,8.242-15.913  c15.831-5.028,32.509-7.578,49.572-7.578c17.064,0,33.741,2.55,49.57,7.578c6.67,2.119,10.36,9.243,8.24,15.913  C318.589,233.74,313.601,237.185,308.23,237.185z"></path>
+                            </svg>
+                        </div>
                         <div class="adv-card_txt">
-                            Відсутність комісій за продаж квитків, що до 30%  зменшує кінцеву вартість для Ваших пасажирів.
+                            Отсутствие комиссий за продажу билетов, что до 30% уменьшает конечную стоимость для Ваших пассажиров.
                         </div>
                     </div>
                     <div class="adv-card">
-                        <div class="adv-card_logo"></div>
+                        <div class="adv-card_logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+                                
+                                <path style="fill:#524E4D;" d="M392.099,140.802l-264.26,152.57c-11.31,6.53-15.223,21.127-8.692,32.439l41.386,71.682h23.746  l-1.253,38.961l20.419,35.369c6.53,11.31,21.127,15.221,32.439,8.691l264.26-152.57c11.31-6.53,15.221-21.127,8.691-32.439  l-20.419-35.369H464.67l1.253-38.961l-41.386-71.682C418.007,138.184,403.409,134.272,392.099,140.802z"/>
+                                
+                                <rect x="301.981" y="152.512" transform="matrix(0.5 0.866 -0.866 0.5 446.9995 -116.5875)" style="fill:#181818;" width="44.977" height="352.625"/>
+                                
+                                <path style="fill:#BEC8D6;" d="M328.886,28.323H23.746C10.686,28.323,0,39.009,0,52.069v168.599  c0,13.06,10.686,23.746,23.746,23.746h305.14c13.06,0,23.746-10.686,23.746-23.746V52.069  C352.633,39.009,341.947,28.323,328.886,28.323z"/>
+                                <g>
+                                
+                                <path style="fill:#181818;" d="M305.14,209.42h-58.883c-6.558,0-11.873-5.317-11.873-11.873c0-6.556,5.316-11.873,11.873-11.873   h58.883c6.558,0,11.873,5.317,11.873,11.873C317.013,204.104,311.698,209.42,305.14,209.42z"/>
+                                
+                                <path style="fill:#181818;" d="M205.757,209.42h-58.883c-6.558,0-11.873-5.317-11.873-11.873c0-6.556,5.316-11.873,11.873-11.873   h58.883c6.558,0,11.873,5.317,11.873,11.873C217.63,204.104,212.315,209.42,205.757,209.42z"/>
+                                
+                                <path style="fill:#181818;" d="M106.375,209.42H47.493c-6.558,0-11.873-5.317-11.873-11.873c0-6.556,5.316-11.873,11.873-11.873   h58.883c6.558,0,11.873,5.317,11.873,11.873C118.248,204.104,112.933,209.42,106.375,209.42z"/>
+                                </g>
+                                <path style="fill:#EE3840;" d="M121.941,126.308c0,13.06-10.686,23.746-23.746,23.746H71.239c-13.06,0-23.746-10.686-23.746-23.746  V99.353c0-13.06,10.686-23.746,23.746-23.746h26.956c13.06,0,23.746,10.686,23.746,23.746V126.308z"/>
+
+                            </svg>
+                        </div>
                         <div class="adv-card_txt">
-                            Оплата здійснюється прямо на Ваш рахунок. Кошти зараховуються вже через кілька годин після продажу квитка.
+                            Оплата осуществляется прямо на Ваш счет. Средства зачисляются уже через несколько часов после оплаты билета.
                         </div>
                     </div>
                     <div class="adv-card">
-                        <div class="adv-card_logo"></div>
+                        <div class="adv-card_logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                
+                                <polygon style="fill:#181818;" points="187.021,285.928 124.014,285.928 98.714,394.777 212.322,394.777 "/>
+                                
+                                <path style="fill:#BEC8D6;" d="M310.597,288.13c0,16.67-13.513,30.184-30.184,30.184H30.184C13.513,318.315,0,304.8,0,288.13  V135.275c0-16.67,13.513-30.184,30.184-30.184h250.23c16.67,0,30.184,13.513,30.184,30.184V288.13z"/>
+                                
+                                <g>
+                                
+                                <path style="fill:#4C5870;" d="M243.632,406.909H66.965c-6.701,0-12.133-5.432-12.133-12.133s5.432-12.133,12.133-12.133h176.665   c6.701,0,12.133,5.432,12.133,12.133S250.333,406.909,243.632,406.909z"/>
+                                
+                                <rect x="353.68" y="105.093" style="fill:#4C5870;" width="158.32" height="289.68"/>
+                                </g>
+                                <g>
+                                
+                                <path style="fill:#181818;" d="M463.469,177.887h-61.262c-6.7,0-12.133-5.432-12.133-12.133s5.433-12.133,12.133-12.133h61.262   c6.7,0,12.133,5.432,12.133,12.133S470.169,177.887,463.469,177.887z"/>
+                                
+                                <path style="fill:#181818;" d="M463.469,226.418h-61.262c-6.7,0-12.133-5.432-12.133-12.133s5.433-12.133,12.133-12.133h61.262   c6.7,0,12.133,5.432,12.133,12.133S470.169,226.418,463.469,226.418z"/>
+                                </g>
+                                
+                                <circle style="fill:#FFD440;" cx="432.834" cy="328.044" r="18.199"/>
+
+                            </svg>
+                        </div>
                         <div class="adv-card_txt">
-                            Повна автоматизація адміністрування.
+                            Полная автоматизация администрирования.
                         </div>
                     </div>
                     
                     <div class="adv-card">
-                        <div class="adv-card_logo"></div>
+                        <div class="adv-card_logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                
+                                <g>
+                                
+                                <circle style="fill:#4C5870;" cx="255.999" cy="49.957" r="45.819"/>
+                                
+                                <path style="fill:#4C5870;" d="M255.999,121.959c-43.38,0-78.547,35.167-78.547,78.547h157.095   C334.547,157.126,299.38,121.959,255.999,121.959z"/>
+                                </g>
+                                
+                                <g>
+                                
+                                <circle style="fill:#181818;" cx="78.547" cy="357.313" r="45.819"/>
+                                
+                                <path style="fill:#181818;" d="M78.547,429.315C35.167,429.315,0,464.482,0,507.863h157.095   C157.095,464.482,121.928,429.315,78.547,429.315z"/>
+                                </g>
+                                
+                                <g>
+                                
+                                <circle style="fill:#269AF2;" cx="433.451" cy="357.313" r="45.819"/>
+                                
+                                <path style="fill:#269AF2;" d="M433.453,429.315c-43.38,0-78.547,35.167-78.547,78.547H512   C512,464.482,476.833,429.315,433.453,429.315z"/>
+                                </g>
+                                
+                                <path style="fill:#4C5870;" d="M337.372,378.194l-68.28-39.422v-78.845c0-7.23-5.862-13.091-13.091-13.091  c-7.229,0-13.091,5.861-13.091,13.091v78.845l-68.28,39.422c-6.262,3.614-8.407,11.621-4.791,17.883  c3.616,6.262,11.624,8.407,17.883,4.791l68.28-39.422l68.28,39.422c2.062,1.19,4.312,1.756,6.533,1.756  c4.524,0,8.926-2.347,11.35-6.547C345.778,389.816,343.633,381.808,337.372,378.194z"/>
+
+                            </svg>
+                        </div>
                         <div class="adv-card_txt">
-                            Ефективні сервіси взаємодії з Вашими пасажирами.
+                            Эффективные сервисы взаимодействия с Вашими пассажирами.
                         </div>
                     </div>
                     <div class="adv-card">
-                        <div class="adv-card_logo"></div>
+                        <div class="adv-card_logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                
+                                <path style="fill:#BEC8D6;" d="M441.605,244.149H267.852V131.442h-23.704v112.706H70.395c-6.545,0-11.852,5.306-11.852,11.852  v124.558h23.704V267.852h161.901v112.706h23.704V267.852h161.901v112.706h23.704V256.001  C453.457,249.455,448.151,244.149,441.605,244.149z"/>
+                                
+                                <rect x="185.6" y="69.712" style="fill:#269AF2;" width="140.788" height="85.428"/>
+                                
+                                <rect x="185.6" y="356.86" style="fill:#4C5870;" width="140.788" height="85.428"/>
+                                
+                                <rect x="371.212" y="356.86" style="fill:#181818;" width="140.788" height="85.428"/>
+                                
+                                <rect y="356.86" style="fill:#A2A9AF;" width="140.788" height="85.428"/>
+
+                            </svg>
+                        </div>
                         <div class="adv-card_txt">
-                            Можливість інтеграції вже існуючих каналів продажу квитків.
+                            Возможность интеграции уже существующих каналов продаж билетов.
                         </div>
                     </div>
                     <div class="adv-card">
-                        <div class="adv-card_logo"></div>
+                        <div class="adv-card_logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 504.124 504.124" style="enable-background:new 0 0 504.124 504.124;" xml:space="preserve">
+                            
+                            <path style="fill:#E4E7E7;" d="M441.108,244.578l-1.182-16.148l10.24-10.24c45.292-45.292,45.292-119.335,0-164.234  c-45.292-45.292-118.942-45.292-164.234,0l-10.24,10.24c-5.12-0.788-10.634-1.182-16.148-1.182l17.723-17.723  c50.018-50.018,131.545-50.412,181.563,0c50.018,50.018,50.018,131.545,0,181.563C458.831,226.855,441.108,244.578,441.108,244.578z   M228.825,64.591l-10.24-10.24c-45.292-45.292-119.335-45.292-164.234,0c-45.686,44.898-45.686,118.942,0,164.234l10.24,10.24  c-0.788,5.12-1.182,10.634-1.182,16.148L45.686,227.25c-50.018-50.018-50.412-131.545,0-181.563  c50.018-50.018,131.545-50.018,181.563,0l17.723,17.723C239.458,63.409,233.945,63.803,228.825,64.591z M63.015,259.545  l1.182,16.148l-10.24,10.24C8.665,331.225,8.665,405.268,53.563,450.166c45.292,45.292,118.942,45.292,164.234,0l10.24-10.24  c5.12,0.788,10.634,1.182,16.148,1.182l-17.723,17.723c-50.018,50.018-131.545,50.412-181.563,0.394S-5.12,327.68,45.292,277.661  L63.015,259.545z M275.298,439.532l10.24,10.24c45.292,45.292,119.335,45.292,164.234,0c45.292-45.292,45.292-118.942-0.394-164.234  l-10.24-10.24c0.788-5.12,1.182-10.634,1.182-16.148l17.723,17.723c50.018,50.018,50.412,131.545,0.394,181.563  s-131.545,50.018-181.563-0.394l-17.723-17.723C264.665,440.714,270.178,440.32,275.298,439.532z"/>
+                            
+                            <path style="fill:#E2574C;" d="M252.062,0C113.034,0,0,113.034,0,252.062s112.64,252.062,252.062,252.062  c139.028,0,252.062-113.034,252.062-252.062S391.089,0,252.062,0z M252.062,378.092c-69.711,0-126.031-56.32-126.031-126.031  s56.32-126.031,126.031-126.031s126.031,56.32,126.031,126.031S321.772,378.092,252.062,378.092z"/>
+                            
+                            <path style="fill:#D95449;" d="M252.062,95.705c-86.252,0-156.357,70.105-156.357,156.357s70.105,156.357,156.357,156.357  s156.357-70.105,156.357-156.357S338.314,95.705,252.062,95.705z M252.062,378.092c-69.711,0-126.031-56.32-126.031-126.031  s56.32-126.031,126.031-126.031s126.031,56.32,126.031,126.031S321.772,378.092,252.062,378.092z"/>
+                            
+                            <path style="fill:#E5685E;" d="M252.062,35.446c-119.729,0-216.615,96.886-216.615,216.615s96.886,216.615,216.615,216.615  s216.615-96.886,216.615-216.615S371.791,35.446,252.062,35.446z M252.062,452.923c-111.065,0-200.862-89.797-200.862-200.862  S140.997,51.2,252.062,51.2s200.862,89.797,200.862,200.862S363.126,452.923,252.062,452.923z"/>
+                            
+                            <path style="fill:#EFEFEF;" d="M193.378,363.52c-22.843-11.815-41.354-30.72-53.169-53.169l-90.978,91.372  c14.966,20.086,32.689,38.203,53.169,53.169L193.378,363.52z M310.351,140.209c22.843,11.815,41.354,30.326,53.169,53.169  l91.372-90.978c-14.966-20.086-33.083-38.203-53.169-53.169L310.351,140.209z M49.231,102.4l90.978,90.978  c11.815-22.843,30.326-41.354,53.169-53.169L102.4,49.231C82.314,64.197,64.197,82.314,49.231,102.4z M454.892,401.723  l-90.978-90.978c-11.815,22.843-30.326,41.354-53.169,53.169l90.978,90.978C421.809,439.926,439.926,421.809,454.892,401.723z"/>
+                            
+                            <path style="fill:#E6E6E6;" d="M332.8,118.154l-22.055,22.055c22.843,11.815,41.354,30.326,53.169,53.169l22.055-22.055  C372.578,149.662,354.462,131.151,332.8,118.154z M140.209,310.351L118.154,332.8c12.997,21.662,31.508,39.778,53.169,53.169  l22.055-22.055C170.929,351.705,152.418,333.194,140.209,310.351z M310.745,363.914l22.055,22.055  c21.662-12.997,39.778-31.508,53.169-53.169l-22.055-22.055C351.705,333.194,333.194,351.705,310.745,363.914z M193.772,140.603  l-22.449-22.449c-21.662,13.391-39.778,31.508-53.169,53.169l22.055,22.055C152.418,170.929,170.929,152.418,193.772,140.603z"/>
+                            
+                            <path style="fill:#F1F1F1;" d="M85.858,365.095l-11.422,11.422c14.572,20.48,32.295,38.597,53.169,53.169l11.422-11.422  C118.154,403.692,100.037,385.969,85.858,365.095z M418.265,365.095c-14.178,20.874-32.295,38.991-53.169,53.169l11.422,11.422  c20.48-14.572,38.597-32.689,53.169-53.169L418.265,365.095z M85.858,139.028c14.178-20.874,32.295-38.991,53.169-53.169L128,74.831  C107.52,89.403,89.403,107.52,74.831,128L85.858,139.028z M418.265,139.028l11.422-11.422  c-14.572-20.48-32.689-38.597-53.169-53.169l-11.422,11.422C385.969,100.037,403.692,118.154,418.265,139.028z"/>
+
+                            </svg>
+                        </div>
                         <div class="adv-card_txt">
-                           Страхування пасажирів.
+                           Страхование пассажиров.
                         </div>
                     </div>
                     <div class="adv-card">
-                        <div class="adv-card_logo"></div>
+                        <div class="adv-card_logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <path style="fill:#4C5870;" d="M248.882,366.663c0.344-18.831-4.495-37.739-14.517-54.376l33.3-33.3l-34.65-34.65l-33.3,33.3  c-16.638-10.022-35.545-14.862-54.376-14.517l-12.203-45.545l-47.334,12.683l12.188,45.485c-8.149,4.501-15.81,10.2-22.714,17.105  S62.67,307.411,58.169,315.56l-45.485-12.188L0,350.708l45.545,12.203c-0.344,18.831,4.497,37.739,14.517,54.376l-33.3,33.299  l34.65,34.65l33.3-33.299c16.638,10.021,35.545,14.862,54.376,14.517L161.292,512l47.334-12.683l-12.188-45.485  c8.149-4.501,15.81-10.2,22.714-17.105s12.604-14.564,17.105-22.714l45.485,12.188l12.683-47.334L248.882,366.663z M184.503,402.076  c-20.562,20.562-54.018,20.562-74.579,0c-20.562-20.562-20.562-54.017,0-74.579c20.562-20.562,54.018-20.562,74.58,0  C205.065,348.059,205.065,381.515,184.503,402.076z"/>
+                               
+                                <path style="fill:#A2A9AF;" d="M463.058,173.546c2.493-9.307,3.596-18.802,3.41-28.211l45.532-12.2l-12.683-47.334l-45.53,12.2  c-4.553-8.263-10.27-15.954-17.103-22.787c-6.729-6.729-14.379-12.448-22.676-17.03l12.192-45.501L378.866,0l-12.189,45.489  c-19.419-0.36-38.213,4.902-54.35,14.617l-33.341-33.341l-34.65,34.65l33.297,33.297c-4.807,7.972-8.591,16.738-11.119,26.171  c-2.493,9.307-3.596,18.802-3.41,28.211l-45.532,12.201l12.683,47.334l45.53-12.2c4.551,8.263,10.27,15.954,17.102,22.786  c6.729,6.729,14.38,12.448,22.676,17.03l-12.191,45.501l47.334,12.684l12.189-45.489c19.419,0.36,38.213-4.902,54.35-14.617  l33.341,33.341l34.65-34.65l-33.297-33.297C456.747,191.744,460.532,182.978,463.058,173.546z M415.724,160.862  c-7.526,28.087-36.499,44.816-64.586,37.289c-8.945-2.396-17.106-7.096-23.599-13.589c-13.308-13.308-18.554-32.849-13.691-50.999  c7.526-28.087,36.499-44.816,64.587-37.289c8.945,2.396,17.105,7.096,23.599,13.589  C415.342,123.172,420.588,142.713,415.724,160.862z"/>
+
+                            </svg>
+                        </div>
                         <div class="adv-card_txt">
-                           Зручні маркетингові інструменти для просування в соціальних мережах та internet.
+                           Удобные маркетинговые инструменты для продвижения в социальных сетях и интернет.
                         </div>
                     </div>
                     
@@ -122,7 +303,7 @@
         </section>
         
         
-        <section class="offer">
+        <section class="offer" data-id="offer">
             <div class="container">
                 <h2>мы предлагаем</h2>
                 <div class="b-offer">
@@ -130,24 +311,32 @@
                         <img src="img/bus.jpg" alt="">
                     </div>
                     <div class="b-offer_r">
-                        <p><strong>GetBus.info</strong> забезпечує можливість прямої взаємодії із пасажирами без посередників та значних комісійних витрат, що зменшує собівартість послуг та підвищує Вашу конкурентоспроможність.</p>
+                        <p><strong>GetBus.info</strong> обеспечивает возможность прямого взаимодействия с пассажирами без посредников и значительных комиссионных расходов, уменьшает себестоимость услуг повышая Вашу конкурентоспособность.</p>
                         
+                    <!-- Блок с видео отключаем -->
+<!--
                         <div class="video-container">
                             <div class="myvideo">
                                 <iframe width="480" height="250" src="https://www.youtube.com/embed/tu4mPGyQySE" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
-                        
+-->
+                    <!-- Блок с видео отключаем -->
+                    
+                        <button class="js-video btn-video">смотреть видео</button>
+                    
                     </div>
                 </div>
             </div>
         </section>
         
-        <section class="team">
+        <section class="team" data-id="team">
             <div class="container">
                 <h2>наша команда</h2>
                 
+<!--
                 <div class="b-team">
+                   
                     <div class="b-team_item">
                         <div class="b-team_item__position">java guru</div>
                         <div class="b-team_item__photo" style="background-image:url(img/face.jpg);">
@@ -161,7 +350,7 @@
                     <div class="b-team_item">
                         <div class="b-team_item__position">java guru</div>
                         <div class="b-team_item__photo" style="background-image:url(img/face.jpg);">
-<!--                            <img src="img/face.jpg" alt="">-->
+
                         </div>
                         <div class="b-team_item__about">
                             <p>быстрокодер</p>
@@ -171,7 +360,7 @@
                     <div class="b-team_item">
                         <div class="b-team_item__position">java guru</div>
                         <div class="b-team_item__photo" style="background-image:url(img/face.jpg);">
-<!--                            <img src="img/face.jpg" alt="">-->
+
                         </div>
                         <div class="b-team_item__about">
                             <p>быстрокодер</p>
@@ -181,7 +370,7 @@
                     <div class="b-team_item">
                         <div class="b-team_item__position">java guru</div>
                         <div class="b-team_item__photo" style="background-image:url(img/face.jpg);">
-<!--                            <img src="img/face.jpg" alt="">-->
+
                         </div>
                         <div class="b-team_item__about">
                             <p>быстрокодер</p>
@@ -191,23 +380,103 @@
                     <div class="b-team_item">
                         <div class="b-team_item__position">java guru</div>
                         <div class="b-team_item__photo" style="background-image:url(img/face.jpg);">
-<!--                            <img src="img/face.jpg" alt="">-->
+
                         </div>
                         <div class="b-team_item__about">
                             <p>быстрокодер</p>
                         </div>
                     </div>
                 </div>
+-->
+                <!--Hover Effects-->
+                    
+                    <section class="content content--c1">
+                        
+                        <a href="#" class="tilter tilter--1">
+                            <figure class="tilter__figure">
+                                <img class="tilter__image" src="img/face.jpg" alt="img01" />
+                                <div class="tilter__deco tilter__deco--shine"><div></div></div>
+                                <figcaption class="tilter__caption">
+                                    <h3 class="tilter__title">Cyberdyne Systems</h3>
+                                    <p class="tilter__description">T-800</p>
+                                </figcaption>
+                                <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+                                    <path d="M20.5,20.5h260v375h-260V20.5z" />
+                                </svg>
+                            </figure>
+                        </a>
+                        
+                        <a href="#" class="tilter tilter--1">
+                            <figure class="tilter__figure">
+                                <img class="tilter__image" src="img/2.jpg" alt="img02" />
+                                <div class="tilter__deco tilter__deco--shine"><div></div></div>
+                                <figcaption class="tilter__caption">
+                                    <h3 class="tilter__title">Walter White</h3>
+                                    <p class="tilter__description">Drug dealer</p>
+                                </figcaption>
+                                <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+                                    <path d="M20.5,20.5h260v375h-260V20.5z" />
+                                </svg>
+                            </figure>
+                        </a>
+                        
+                        <a href="#" class="tilter tilter--1">
+                            <figure class="tilter__figure">
+                                <img class="tilter__image" src="img/face.jpg" alt="img01" />
+                                <div class="tilter__deco tilter__deco--shine"><div></div></div>
+                                <figcaption class="tilter__caption">
+                                    <h3 class="tilter__title">Cyberdyne Systems</h3>
+                                    <p class="tilter__description">T-800</p>
+                                </figcaption>
+                                <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+                                    <path d="M20.5,20.5h260v375h-260V20.5z" />
+                                </svg>
+                            </figure>
+                        </a>
+                        
+                        <a href="#" class="tilter tilter--1">
+                            <figure class="tilter__figure">
+                                <img class="tilter__image" src="img/face.jpg" alt="img01" />
+                                <div class="tilter__deco tilter__deco--shine"><div></div></div>
+                                <figcaption class="tilter__caption">
+                                    <h3 class="tilter__title">Cyberdyne Systems</h3>
+                                    <p class="tilter__description">T-800</p>
+                                </figcaption>
+                                <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+                                    <path d="M20.5,20.5h260v375h-260V20.5z" />
+                                </svg>
+                            </figure>
+                        </a>
+                        
+                        <a href="#" class="tilter tilter--1">
+                            <figure class="tilter__figure">
+                                <img class="tilter__image" src="img/2.jpg" alt="img02" />
+                                <div class="tilter__deco tilter__deco--shine"><div></div></div>
+                                <figcaption class="tilter__caption">
+                                    <h3 class="tilter__title">Walter White</h3>
+                                    <p class="tilter__description">Drug dealer</p>
+                                </figcaption>
+                                <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+                                    <path d="M20.5,20.5h260v375h-260V20.5z" />
+                                </svg>
+                            </figure>
+                        </a>
+                        
+                    </section>
+             
+                
+                <!--Hover Effects-->
                 
             </div>
         </section>
         
-        <section class="contact">
+        <section class="contact" data-id="contact">
             <div class="container">
                <h2>контакты</h2>
                
                 <div class="contact-info">
-                    <address>Kyiv, Novopilska 34 str.</address>
+                    <h3>Киев</h3>
+                    <span>улица Крещатик 7, офис 777<br> тел: 044 333 22 44</span>
                 </div>                
             </div>
             <div class="container-fluid">
@@ -221,23 +490,272 @@
             <div class="container">
                 Copyright GetBus. All rights reserved.
             </div>
-        </footer>    
+        </footer>
+            
+        <div class="lang">
+            <div class="languages" tabindex="-1">
+                <div class="language-item" onclick="$(this).parent().focus();">
+                    <svg class="svg-translate-curve">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-translate-curve"></use>
+                    </svg>
+                    <span>uk</span>
+                </div>
+                
+                <a class="language-item switch-language-control" href="http://milsdev.com/en/#services">
+                    <svg class="svg-translate-curve">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-small-translate-curve"></use>
+                    </svg>
+                    <span>en</span>
+                </a>
+                
+                <a class="language-item switch-language-control" href="http://milsdev.com/#services">
+                    <svg class="svg-translate-curve">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-small-translate-curve"></use>
+                    </svg>
+                    <span>ru</span>
+                </a>
+            </div>
+        </div>
         
     </main>
+    <div class="video-popup__overlay" data-video-popup="close"></div>
+    <div class="video-popup__popup">
+        <span class="video-popup__close" data-video-popup="close"></span>
+        <div class="video-popup__inner">
+            <div class="maps">
+
+            </div>
+        </div>
+    </div>
     
-  
+    
+    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".subtitle").css({
+           "animation": "type 5s steps(50, end) forwards",
+            "animation-delay": "3s"
+        });
+    });
+</script>
 <script src="js/common.js"></script>
 <script>
-    var map = L.map('mapid').setView([51.505, -0.09], 13);
+    var map = L.map('mapid').setView([50.451567, 30.518930], 10);
 
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-        L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('GetBus.<br> We right here.')
-    .openPopup();
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
+    var marker = L.marker([50.451567, 30.518930]).addTo(map)
+        marker.bindPopup('GetBus.<br> We right here.').openPopup();
 </script>
 <script src="js/script.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/anime.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function() {
+    var tiltSettings = [
+    {},
+    {
+        movement: {
+            imgWrapper : {
+                translation : {x: 10, y: 10, z: 30},
+                rotation : {x: 0, y: -10, z: 0},
+                reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+            },
+            lines : {
+                translation : {x: 10, y: 10, z: [0,70]},
+                rotation : {x: 0, y: 0, z: -2},
+                reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
+            },
+            caption : {
+                rotation : {x: 0, y: 0, z: 2},
+                reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+            },
+//					overlay : {
+//						translation : {x: 10, y: -10, z: 0},
+//						rotation : {x: 0, y: 0, z: 2},
+//						reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
+//					},
+            shine : {
+                translation : {x: 100, y: 100, z: 0},
+                reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+            }
+        }
+    },
+    {
+        movement: {
+            imgWrapper : {
+                rotation : {x: -5, y: 10, z: 0},
+                reverseAnimation : {duration : 900, easing : 'easeOutCubic'}
+            },
+            caption : {
+                translation : {x: 30, y: 30, z: [0,40]},
+                rotation : {x: [0,15], y: 0, z: 0},
+                reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
+            },
+//					overlay : {
+//						translation : {x: 10, y: 10, z: [0,20]},
+//						reverseAnimation : {duration : 1000, easing : 'easeOutExpo'}
+//					},
+            shine : {
+                translation : {x: 100, y: 100, z: 0},
+                reverseAnimation : {duration : 900, easing : 'easeOutCubic'}
+            }
+        }
+    },
+    {
+        movement: {
+            imgWrapper : {
+                rotation : {x: -5, y: 10, z: 0},
+                reverseAnimation : {duration : 50, easing : 'easeOutQuad'}
+            },
+            caption : {
+                translation : {x: 20, y: 20, z: 0},
+                reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+            },
+//					overlay : {
+//						translation : {x: 5, y: -5, z: 0},
+//						rotation : {x: 0, y: 0, z: 6},
+//						reverseAnimation : {duration : 1000, easing : 'easeOutQuad'}
+//					},
+            shine : {
+                translation : {x: 50, y: 50, z: 0},
+                reverseAnimation : {duration : 50, easing : 'easeOutQuad'}
+            }
+        }
+    },
+    {
+        movement: {
+            imgWrapper : {
+                translation : {x: 0, y: -8, z: 0},
+                rotation : {x: 3, y: 3, z: 0},
+                reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
+            },
+            lines : {
+                translation : {x: 15, y: 15, z: [0,15]},
+                reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
+            },
+//					overlay : {
+//						translation : {x: 0, y: 8, z: 0},
+//						reverseAnimation : {duration : 600, easing : 'easeOutExpo'}
+//					},
+            caption : {
+                translation : {x: 10, y: -15, z: 0},
+                reverseAnimation : {duration : 900, easing : 'easeOutExpo'}
+            },
+            shine : {
+                translation : {x: 50, y: 50, z: 0},
+                reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
+            }
+        }
+    },
+    {
+        movement: {
+            lines : {
+                translation : {x: -5, y: 5, z: 0},
+                reverseAnimation : {duration : 1000, easing : 'easeOutExpo'}
+            },
+            caption : {
+                translation : {x: 15, y: 15, z: 0},
+                rotation : {x: 0, y: 0, z: 3},
+                reverseAnimation : {duration : 1500, easing : 'easeOutElastic', elasticity : 700}
+            },
+//					overlay : {
+//						translation : {x: 15, y: -15, z: 0},
+//						reverseAnimation : {duration : 500,easing : 'easeOutExpo'}
+//					},
+            shine : {
+                translation : {x: 50, y: 50, z: 0},
+                reverseAnimation : {duration : 500, easing : 'easeOutExpo'}
+            }
+        }
+    },
+    {
+        movement: {
+            imgWrapper : {
+                translation : {x: 5, y: 5, z: 0},
+                reverseAnimation : {duration : 800, easing : 'easeOutQuart'}
+            },
+            caption : {
+                translation : {x: 10, y: 10, z: [0,50]},
+                reverseAnimation : {duration : 1000, easing : 'easeOutQuart'}
+            },
+            shine : {
+                translation : {x: 50, y: 50, z: 0},
+                reverseAnimation : {duration : 800, easing : 'easeOutQuart'}
+            }
+        }
+    },
+    {
+        movement: {
+            lines : {
+                translation : {x: 40, y: 40, z: 0},
+                reverseAnimation : {duration : 1500, easing : 'easeOutElastic'}
+            },
+            caption : {
+                translation : {x: 20, y: 20, z: 0},
+                rotation : {x: 0, y: 0, z: -5},
+                reverseAnimation : {duration : 1000, easing : 'easeOutExpo'}
+            },
+//					overlay : {
+//						translation : {x: -30, y: -30, z: 0},
+//						rotation : {x: 0, y: 0, z: 3},
+//						reverseAnimation : {duration : 750, easing : 'easeOutExpo'}
+//					},
+            shine : {
+                translation : {x: 100, y: 100, z: 0},
+                reverseAnimation : {duration : 750, easing : 'easeOutExpo'}
+            }
+        }
+    }
+    ];
+
+    function init() {
+        var idx = 0;
+        [].slice.call(document.querySelectorAll('a.tilter')).forEach(function(el, pos) { 
+            idx = pos%2 === 0 ? idx : idx;
+            new TiltFx(el, tiltSettings[idx]);
+        });
+    }
+
+    // Preload all images.
+    imagesLoaded(document.querySelector('main'), function() {
+        document.body.classList.remove('loading');
+        init();
+    });
+
+    // REMOVE THIS!
+    // For Demo purposes only. Prevent the click event.
+//			[].slice.call(document.querySelectorAll('a[href="#"]')).forEach(function(el) {
+//				el.addEventListener('click', function(ev) { ev.preventDefault(); });
+//			});
+
+//			var pater = document.querySelector('.pater'),
+//				paterSVG = pater.querySelector('.pater__svg'),
+//				pathEl = paterSVG.querySelector('path'),
+//				paths = {default: pathEl.getAttribute('d'), active: paterSVG.getAttribute('data-path-hover')};
+
+//			pater.addEventListener('mouseenter', function() {
+//				anime.remove(pathEl);
+//				anime({
+//					targets: pathEl,
+//					d: paths.active,
+//					duration: 400,
+//					easing: 'easeOutQuad'
+//				});
+//			});
+
+//			pater.addEventListener('mouseleave', function() {
+//				anime.remove(pathEl);
+//				anime({
+//					targets: pathEl,
+//					d: paths.default,
+//					duration: 400,
+//					easing: 'easeOutExpo'
+//				});
+//			});
+})();
+</script>
 </body>
 </html>
